@@ -1,0 +1,1029 @@
+:root {
+  /* Colores */
+  --primary-orange: #ee7136;
+  --secondary-orange: #fbccae;
+  --primary-green: #3fad55;
+  --secondary-green: #bcd6b0;
+  --gray: #faf9f9;
+  --primary-white: #efefef;
+  --secondary-white: #faf9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  background-image: url("/assets/icons/Frame.png");
+  background-repeat: unset;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+/**************************************** Header **********************/
+.level-one {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1.6rem auto;
+  display: none;
+}
+
+.level-one div {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.level-one p,
+.level-one .ig-link a,
+.level-one .wa-link a {
+  display: flex;
+  font-size: 1.7rem;
+  margin: 0.4rem auto;
+  justify-self: center;
+  align-items: center;
+}
+
+.ig-link a:visited,
+.wa-link a:visited {
+  color: black;
+}
+
+.ig-link a:hover,
+.wa-link a:hover {
+  background-color: var(--primary-orange);
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 11px 11px 1px rgba(63, 173, 85, 0.41);
+  -moz-box-shadow: -1px 11px 11px 1px rgba(63, 173, 85, 0.41);
+  box-shadow: -1px 11px 11px 1px rgba(63, 173, 85, 0.41);
+  padding-right: 3px;
+  transition: 0.5s;
+}
+
+.level-one .fas {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.level-one .xfa-whatsapp {
+  background-image: url("../assets/icons/whatsapp.svg");
+}
+.xfa-phone {
+  background-image: url("../assets/icons/phone.svg");
+}
+.xfa-evenlope {
+  background-image: url("../assets/icons/instagram.svg");
+}
+.xfa-clock {
+  background-image: url("../assets/icons/clock.svg");
+}
+
+nav {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+}
+
+.logo {
+  height: 70px;
+  margin-left: 20px;
+}
+
+.nav-list .logo-nav {
+  transition: all 1s;
+  display: none;
+}
+.nav-list {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 75px;
+  background: var(--secondary-orange);
+  text-align: center;
+  float: right;
+  transition: all 0.5s;
+  display: none;
+}
+
+.nav-list li {
+  opacity: 1;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+
+.nav-list li a {
+  color: var(--primary-orange);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.nav li a.active,
+.nav-list li a:hover {
+  color: var(--primary-green);
+}
+
+.hamburger-btn {
+  display: block;
+  font-size: 30px;
+  color: var(--primary-green);
+  float: right;
+  line-height: 75px;
+  margin-right: 40px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+#check-nav {
+  display: none;
+}
+
+#check-nav:checked ~ .nav-list {
+  display: block;
+  height: 100vh;
+}
+
+#check-nav:checked ~ .nav-list .logo-nav {
+  display: block;
+}
+
+/* FIN HEADER */
+
+/**************************************** Home **********************/
+
+.backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-bottom: 4.8rem;
+  background-image: url("../assets/img/home-woman-patient.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.boton {
+  font-size: 16px; /* Cambiar el tamaño de la tipografia */
+  font-weight: bold; /* Fuente en negrita o bold */
+  color: #101010; /* Color del texto */
+  border-radius: 9px; /* Borde del boton */
+  letter-spacing: 2px; /* Espacio entre letras */
+  background-color: #99d6a5; /* Color de fondo */
+  padding: 18px 20px; /* Relleno del boton */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transition: all 300ms ease 0ms;
+  opacity: 0.9;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+.boton:hover {
+  background-color: var(
+    --primary-green
+  ); /* Color de fondo al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 600px) {
+  .boton {
+    font-size: 14px;
+    padding: 12px 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.home--container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home--container-item {
+  height: 300px;
+  margin-bottom: 3.2rem;
+  margin-top: 10px;
+}
+
+.home--container-item .home--container-item-figure {
+  background-image: url("/assets/img/polygon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home--container-item img {
+  margin-bottom: 1.2rem;
+  border-radius: 16rem;
+  max-width: 70%;
+}
+
+.home--container div p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.home--container-instalations {
+  width: 100%;
+  margin: 48px auto;
+  text-align: center;
+  background-image: url("../assets/img/instalations-background-movil.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home--container-instalations h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin: 0 auto;
+  margin-bottom: 2.4rem;
+}
+
+.home--instalations-slider {
+  width: 100%;
+  display: flex;
+  max-width: 70rem;
+  height: 350px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin: 4px auto;
+  padding: 0.8rem;
+}
+
+.home--instalations-slider img {
+  width: 512px;
+  height: 288px;
+  margin: 0 4px;
+  scroll-snap-align: center;
+}
+
+.home--container-implant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home--container-implant h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin: 1.6rem auto;
+}
+
+.home--container-implant img {
+  width: 90%;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.home--container-implant p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #625c59;
+  margin: 0 10%;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/***************************Footer**************************/
+
+footer {
+  width: 100%;
+  min-height: 5rem;
+  display: grid;
+  margin-top: auto;
+  grid-template-columns: 1fr;
+  align-items: center;
+  font-size: 1.3rem;
+  background-color: #3d5041;
+  color: var(--primary-white);
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer .footer-left {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.footer-left-title,
+footer .footer-center .footer-center-title,
+.footer-right-title {
+  font-size: 2rem;
+  margin: 1.2rem auto;
+  color: var(--secondary-green);
+}
+
+footer .footer-left ul {
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+footer .footer-left ul li {
+  margin: 0.6rem;
+}
+
+footer .footer-left ul li a {
+  color: var(--primary-white);
+}
+
+footer .footer-left ul li a:hover {
+  color: var(--secondary-green);
+}
+footer .footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.6rem auto;
+}
+
+footer .footer-center div {
+  width: 100%;
+}
+
+footer .footer-center p a {
+  display: flex;
+  font-size: 1.6rem;
+  margin: 0.4rem auto;
+  justify-self: center;
+  align-items: center;
+  color: var(--gray);
+  padding-right: 5px;
+}
+
+footer .footer-center p a:hover {
+  background-color: var(--primary-green);
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+footer .footer-center .icon-footer {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+}
+
+footer .footer-center div p .whatsapp-icon {
+  background-image: url("../assets/icons/whatsapp.svg");
+}
+.facebook-icon {
+  background-image: url("../assets/icons/facebook.svg");
+}
+
+.instagram-icon {
+  background-image: url("../assets/icons/instagram.svg");
+}
+
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.6rem auto;
+}
+
+footer .footer-right div {
+  width: 100%;
+}
+
+footer .footer-right div p {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0.8rem auto;
+  justify-content: left;
+  align-items: center;
+}
+
+footer .footer-right .icon-footer {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 8px;
+}
+
+.phone-icon {
+  background-image: url("../assets/icons/phone.svg");
+}
+.mail-icon {
+  background-image: url("../assets/icons/mail.svg");
+}
+.clock-icon {
+  background-image: url("../assets/icons/clock.svg");
+}
+
+/**************************** QUIENES SOMOS *******************/
+
+.about--container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 32px;
+  margin: 5px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.about--container-item {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+}
+.about--container-item img {
+  width: 90%;
+  height: 90%;
+  max-width: 50rem;
+}
+
+.about--container-item h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--primary-green);
+}
+
+.about--container-item h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+
+.about--container-item p {
+  text-align: justify;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  color: #625c59;
+}
+
+/************************** Contact   ***********************************/
+
+.contact--backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-image: url("../assets/img/contact-header-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact--container {
+  width: 95%;
+  min-height: 95%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 32px auto;
+  padding-top: 30px;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.contact--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.contact--info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0 auto;
+}
+
+.contact--info-card {
+  padding: 0 5%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact--icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icon-home {
+  background-image: url(../assets/icons/home.svg);
+}
+.icon-phone {
+  background-image: url(../assets/icons/Telefono.svg);
+}
+.icon-mail {
+  background-image: url(../assets/icons/MailContact.svg);
+  width: 70px;
+}
+
+.contact--info-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #625c59;
+  margin-bottom: 15px;
+}
+
+.contact--info-text {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #625c59;
+  margin-bottom: 15px;
+}
+
+.contact--info-data {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: var(--primary-orange);
+  margin-bottom: 15px;
+}
+
+.contact--info-email {
+  font-size: 1.8rem;
+}
+
+.container-map {
+  width: 90%;
+  height: 300px;
+  max-width: 800px;
+  background-color: gray;
+  margin: 32px auto;
+}
+
+/************************** Procedimientos ********************************/
+
+.procedimiento--container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 32px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.procedimiento--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.procedimiento--info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0 auto;
+}
+
+.procedimiento--info-card {
+  padding: 0 5%;
+  height: auto;
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.procedimiento--icon {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-implantes {
+  background-image: url(../assets/img/implantes.png);
+}
+
+.icon-cirugia {
+  background-image: url(../assets/img/cirugia-oral.png);
+}
+
+.icon-ortodoncia {
+  background-image: url(../assets/img/ortodoncia.png);
+}
+
+.icon-diseño {
+  background-image: url(../assets/img/diseño-sonrisa.png);
+}
+
+.procedimiento--info-title {
+  margin: 10px 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: var(--primary-green);
+  text-decoration: underline solid var(--primary-orange) 1px;
+}
+
+.procedimiento--info-text {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.procedimiento--info-button {
+  height: 40px;
+  width: 120px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #727272;
+  font-family: Helvetica, sans-serif;
+  background-color: rgba(187, 187, 187, 0.5);
+  border: 0;
+  border-radius: 12px;
+}
+
+.procedimiento--info-button:hover {
+  width: 130px;
+  color: var(--primary-orange);
+  background-color: var(--primary-green);
+  cursor: pointer;
+}
+
+/**********************implantes************************/
+
+.implantes--container {
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  margin: 32px 5%;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.implantes--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.implantes--container h2 {
+  color: var(--primary-green);
+}
+
+.implantes--container p {
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.implantes--backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-image: url("../assets/img/implantes-header-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/********************** Ortodoncia ************************/
+
+.ortodoncia--container {
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  margin: 32px 5%;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.ortodoncia--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.ortodoncia--container p {
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: black;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.ortodoncia--container h4 {
+  margin: 0 0 12px;
+  color: var(--primary-green);
+  font-size: 1.8rem;
+}
+
+.ortodoncia--backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 35rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-image: url("../assets/img/ortodoncia-header-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/********************** Diseño de sonrisa************************/
+
+.diseño-sonrisa--container {
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  margin: 32px 5%;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.diseño-sonrisa--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.diseño-sonrisa--container p {
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: black;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.diseño-sonrisa--backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 35rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-image: url("../assets/img/diseño-sonrisa-header-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/********************** Cirugia Oral***********************/
+
+.cirugia-oral--container {
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  margin: 32px 5%;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.cirugia-oral--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.cirugia-oral--container p {
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: black;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.cirugia-oral--backgroundImg {
+  width: 100%;
+  min-width: 28.8rem;
+  height: 35rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-image: url("../assets/img/cirugia-oral-header-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/************************** Testimonios ********************************/
+
+.testimonios--container {
+  width: 95%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  margin: 32px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(212, 212, 212, 0.425);
+}
+
+.testimonios--container h1 {
+  width: auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--primary-green);
+  margin: 0 auto;
+  text-decoration: underline solid var(--primary-orange) 1px;
+  margin-bottom: 24px;
+}
+
+.testimonios--info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0 auto;
+}
+
+.testimonios--info-card {
+  padding: 0 5%;
+  height: auto;
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.testimonios--icon {
+  background-color: gray;
+  background-image: none;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.testimonios--info-pacient {
+  margin: 10px 0 0 0;
+  font-size: 2.3rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: black;
+}
+
+.testimonios--info-tratamiento {
+  margin: 0 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: black;
+}
+
+.testimonios--info-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.testimonios--info-button {
+  height: 40px;
+  width: 120px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #727272;
+  font-family: Helvetica, sans-serif;
+  background-color: rgba(187, 187, 187, 0.5);
+  border: 0;
+  border-radius: 12px;
+}
+
+.testimonios--info-button:hover {
+  width: 130px;
+  color: var(--primary-orange);
+  background-color: var(--primary-green);
+  cursor: pointer;
+}
